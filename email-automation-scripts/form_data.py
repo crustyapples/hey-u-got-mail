@@ -42,17 +42,18 @@ def main():
     values = result.get('values', [])
     # row[1] represents column(B) containing email addresses required
     emails = [r[1] for r in values]
-    # calls function from email_senders to send template email to addresses captured in the form
-    
+   
+    # reads contacts.txt for email addresses that have been contacted
     with open("email-automation-scripts/contacts.txt", "r") as c:
         sent_emails = c.read().split(',')
     
-    print(sent_emails)
-    print(emails)
+    print("Contacted emails: " + sent_emails)
     
+    # determines which addresses have not been contacted yet from google sheet list (emails)
     emailSend = list(filter(lambda x: True if x not in sent_emails else False, emails))
-    print(emailSend)
+    print("Emails to be contacted: " + emailSend)
     
+    # calls function from email_senders to send template email to addresses captured in the form and writes the emails addresses to contacts.txt
     if len(emailSend) != 0:
         with open('email-automation-scripts/contacts.txt', "a+") as c:
             c.write(','+','.join(email_sender.send_emails(emailSend)))
