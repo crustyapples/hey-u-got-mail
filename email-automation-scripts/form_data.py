@@ -47,11 +47,11 @@ def main():
     with open("email-automation-scripts/contacts.txt", "r") as c:
         sent_emails = c.read().split(',')
     
-    print("Contacted emails: " + sent_emails)
+    print("Contacted emails: " + str(sent_emails))
     
     # determines which addresses have not been contacted yet from google sheet list (emails)
     emailSend = list(filter(lambda x: True if x not in sent_emails else False, emails))
-    print("Emails to be contacted: " + emailSend)
+    print("Emails to be contacted: " + str(emailSend))
     
     # calls function from email_senders to send template email to addresses captured in the form and writes the emails addresses to contacts.txt
     if len(emailSend) != 0:
