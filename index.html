@@ -41,6 +41,15 @@
     opacity: 0.95;
     background-color: #561D25;
     color: white;
+    float: left;
+}
+
+.carousel {
+  float: right;
+  float: top;
+  height: 500px;
+  width: 500px;
+  margin-top: 10px;;
 }
 
 .btn {
@@ -68,30 +77,27 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a class="nav-item nav-link" href="index.html">Our Beneficiaries <span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link" href="#">About Us</a>
-            <a class="nav-item nav-link" href="CardForms.html">Send a Card!</a>
+            <a class="nav-item nav-link" href="ob.html">Our Beneficiaries <span class="sr-only">(current)</span></a>
+           
+            <a class="nav-item nav-link" href="cardforms.html">Send a Card!</a>
           </div>
         </div>
       </nav>
       <div class="container">
-        <div class="jumbotron jumbotron-fluid col-lg-6 col-md-8">
+        <div class="jumbotron jumbotron-fluid col-lg-6 col-md-6">
             <div class="container">
               <h1 class="display-4">Our Story</h1>
               <p class="lead">We've seen the headlines. They're stressful. It's also difficult not seeing our loved ones as frequently, and even harder to imagine how others affected by COVID-19 are coping. That's why we created the Hey, You Got Mail! Project to spread positivity in these unprecedented times.</p>
               <p class = "lead"> The Hey, You Got Mail! Team sources, designs, makes and mails high quality handmade cards on your behalf to be sent to someone you love, or to a community you want to support as #sgunited.</p>
               <p class="lead">There's always something special about receiving a handmade card in the mail, and we can't wait to share the love with you.</p>
+              <a href="CardForms.html">
+                <button type="button" class="btn btn-outline-danger" style= "width: 100px; height: 60px; margin-bottom: 30px;">Send a Card!</button>
+              </a>
             </div>
+            
           </div>
-          <a href="CardForms.html">
-            <button type="button" class="btn btn-outline-danger" style= "width: 100px; height: 60px; margin-bottom: 30px;">Send a Card!</button>
-          </a>
-          <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel" style="margin-bottom: 100px;">
-            <ol class="carousel-indicators">
-              <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-              <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-              <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-            </ol>
+          
+          <div id="carouselExampleCaptions" class="carousel slide col-lg-6 col-md-6 col-12" data-ride="carousel" style="margin-bottom: 100px;">
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <img src="designmats/hygm1.jpg" class="d-block w-100" alt="...">
@@ -123,10 +129,10 @@
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="sr-only">Next</span>
             </a>
-          </div>         
+          </div> 
+          
+          
       </div>
-
-      
      
     
     <!-- Optional JavaScript -->
