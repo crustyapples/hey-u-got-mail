@@ -1,5 +1,0 @@
-SALES: 
- Single Card: 4 
- Multiple Cards: 11 
- Donations: 1 
- Current Total Card Orders: 15
